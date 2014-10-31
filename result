@@ -1,0 +1,14 @@
+Allsite.Member = DS.Model.extend({
+      name: DS.attr('string'),
+      airport: DS.attr('string')
+});
+
+Allsite.Member.FIXTURES = [
+    {
+        name: "Liz",
+        airport: "BOS"
+    },
+    {
+        name: "Idan",
+        airports: 
+

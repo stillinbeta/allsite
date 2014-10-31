@@ -1,0 +1,565 @@
+{
+ "kind": "qpxExpress#tripsSearch",
+ "trips": {
+  "kind": "qpxexpress#tripOptions",
+  "requestId": "0Zawpo1LH6UY0gct70KwKR",
+  "data": {
+   "kind": "qpxexpress#data",
+   "airport": [
+    {
+     "kind": "qpxexpress#airportData",
+     "code": "BOS",
+     "city": "BOS",
+     "name": "Boston Logan International"
+    },
+    {
+     "kind": "qpxexpress#airportData",
+     "code": "LGA",
+     "city": "NYC",
+     "name": "New York La Guardia"
+    },
+    {
+     "kind": "qpxexpress#airportData",
+     "code": "PHL",
+     "city": "PHL",
+     "name": "Philadelphia/Wilmington Int'l"
+    },
+    {
+     "kind": "qpxexpress#airportData",
+     "code": "YYZ",
+     "city": "YTO",
+     "name": "Toronto Lester B Pearson"
+    }
+   ],
+   "city": [
+    {
+     "kind": "qpxexpress#cityData",
+     "code": "BOS",
+     "name": "Boston"
+    },
+    {
+     "kind": "qpxexpress#cityData",
+     "code": "NYC",
+     "name": "New York"
+    },
+    {
+     "kind": "qpxexpress#cityData",
+     "code": "PHL",
+     "name": "Philadelphia"
+    },
+    {
+     "kind": "qpxexpress#cityData",
+     "code": "YTO",
+     "name": "Toronto"
+    }
+   ],
+   "aircraft": [
+    {
+     "kind": "qpxexpress#aircraftData",
+     "code": "CR7",
+     "name": "Canadair RJ 700"
+    },
+    {
+     "kind": "qpxexpress#aircraftData",
+     "code": "CRJ",
+     "name": "Canadair Reg. Jet"
+    },
+    {
+     "kind": "qpxexpress#aircraftData",
+     "code": "E90",
+     "name": "Embraer RJ-190"
+    }
+   ],
+   "tax": [
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "XA",
+     "name": "USDA APHIS Fee"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "ZP",
+     "name": "US Flight Segment Tax"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "XG",
+     "name": "Canadian Goods and Services Tax"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "XF",
+     "name": "US Passenger Facility Charge"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "RC",
+     "name": "Canadian Harmonized Sales Tax (ON)"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "XY",
+     "name": "US Immigration Fee"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "CA",
+     "name": "Canadian Air Travelers Security Charge"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "AY",
+     "name": "US September 11th Security Fee"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "YC",
+     "name": "US Customs Fee"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "SQ",
+     "name": "Toronto Airport Improvement Fee"
+    },
+    {
+     "kind": "qpxexpress#taxData",
+     "id": "US_1",
+     "name": "US Transportation Tax"
+    }
+   ],
+   "carrier": [
+    {
+     "kind": "qpxexpress#carrierData",
+     "code": "US",
+     "name": "US Airways, Inc."
+    }
+   ]
+  },
+  "tripOption": [
+   {
+    "kind": "qpxexpress#tripOption",
+    "saleTotal": "USD486.07",
+    "id": "fYPCItHf2LRO9x44FP0SQS001",
+    "slice": [
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 263,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 89,
+        "flight": {
+         "carrier": "US",
+         "number": "3731"
+        },
+        "id": "G3TqDZcyg2GE-JZf",
+        "cabin": "COACH",
+        "bookingCode": "Q",
+        "bookingCodeCount": 7,
+        "marriedSegmentGroup": "0",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "LvZWW8Z4fkOI40sp",
+          "aircraft": "CRJ",
+          "arrivalTime": "2014-10-31T13:08-04:00",
+          "departureTime": "2014-10-31T11:39-04:00",
+          "origin": "YYZ",
+          "destination": "PHL",
+          "originTerminal": "3",
+          "destinationTerminal": "F",
+          "duration": 89,
+          "operatingDisclosure": "OPERATED BY US AIRWAYS EXPRESS-AIR WISCONSIN",
+          "mileage": 346,
+          "secure": true
+         }
+        ],
+        "connectionDuration": 97
+       },
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 77,
+        "flight": {
+         "carrier": "US",
+         "number": "1726"
+        },
+        "id": "GX20spyLqo4SwR9z",
+        "cabin": "COACH",
+        "bookingCode": "Q",
+        "bookingCodeCount": 7,
+        "marriedSegmentGroup": "0",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "LEXTR58K3tlj+EwA",
+          "aircraft": "E90",
+          "arrivalTime": "2014-10-31T16:02-04:00",
+          "departureTime": "2014-10-31T14:45-04:00",
+          "origin": "PHL",
+          "destination": "BOS",
+          "originTerminal": "B",
+          "destinationTerminal": "B",
+          "duration": 77,
+          "onTimePerformance": 79,
+          "mileage": 279,
+          "secure": true
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "kind": "qpxexpress#sliceInfo",
+      "duration": 233,
+      "segment": [
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 78,
+        "flight": {
+         "carrier": "US",
+         "number": "2135"
+        },
+        "id": "GFYt3KdlhfiWRSlD",
+        "cabin": "COACH",
+        "bookingCode": "E",
+        "bookingCodeCount": 9,
+        "marriedSegmentGroup": "1",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "LLI8Dxfp7LPAfrKU",
+          "aircraft": "E90",
+          "arrivalTime": "2014-11-06T08:03-05:00",
+          "departureTime": "2014-11-06T06:45-05:00",
+          "origin": "BOS",
+          "destination": "LGA",
+          "originTerminal": "B",
+          "destinationTerminal": "C",
+          "duration": 78,
+          "onTimePerformance": 86,
+          "mileage": 184,
+          "secure": true
+         }
+        ],
+        "connectionDuration": 57
+       },
+       {
+        "kind": "qpxexpress#segmentInfo",
+        "duration": 98,
+        "flight": {
+         "carrier": "US",
+         "number": "8391"
+        },
+        "id": "GhtWZEVdJ+DTVrnf",
+        "cabin": "COACH",
+        "bookingCode": "E",
+        "bookingCodeCount": 7,
+        "marriedSegmentGroup": "1",
+        "leg": [
+         {
+          "kind": "qpxexpress#legInfo",
+          "id": "Ldes9J141X7PpUed",
+          "aircraft": "CR7",
+          "arrivalTime": "2014-11-06T10:38-05:00",
+          "departureTime": "2014-11-06T09:00-05:00",
+          "origin": "LGA",
+          "destination": "YYZ",
+          "originTerminal": "B",
+          "destinationTerminal": "3",
+          "duration": 98,
+          "operatingDisclosure": "OPERATED BY ENVOY AIR AS AMERICAN EAGLE",
+          "mileage": 355,
+          "meal": "Food for Purchase",
+          "secure": true
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "pricing": [
+     {
+      "kind": "qpxexpress#pricingInfo",
+      "fare": [
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "Amhp0LwT/MshSs+w4AY9Sq6d4rt4/1cIqAySr4+1Grox6Fo",
+        "carrier": "US",
+        "origin": "YTO",
+        "destination": "BOS",
+        "basisCode": "QA00ZNG1"
+       },
+       {
+        "kind": "qpxexpress#fareInfo",
+        "id": "AFXQc/+z1LQWiHMCFVsTSwyAGQJ0B30G+XPWec0o4BtO/hE",
+        "carrier": "US",
+        "origin": "BOS",
+        "destination": "YTO",
+        "basisCode": "EA07ZNX3"
+       }
+      ],
+      "segmentPricing": [
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AFXQc/+z1LQWiHMCFVsTSwyAGQJ0B30G+XPWec0o4BtO/hE",
+        "segmentId": "GhtWZEVdJ+DTVrnf",
+        "freeBaggageOption": [
+         {
+          "kind": "qpxexpress#freeBaggageAllowance",
+          "bagDescriptor": [
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "ASSISTIVE DEVICES",
+            "count": 0,
+            "subcode": "0GM"
+           },
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "INFANT CAR SEAT",
+            "count": 0,
+            "description": [
+             "Infant Car Seat"
+            ],
+            "subcode": "0G5"
+           },
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "STROLLER OR PUSHCHAIR",
+            "count": 0,
+            "description": [
+             "Stroller/Pushchair"
+            ],
+            "subcode": "0F4"
+           }
+          ],
+          "pieces": 0
+         }
+        ]
+       },
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "Amhp0LwT/MshSs+w4AY9Sq6d4rt4/1cIqAySr4+1Grox6Fo",
+        "segmentId": "GX20spyLqo4SwR9z",
+        "freeBaggageOption": [
+         {
+          "kind": "qpxexpress#freeBaggageAllowance",
+          "bagDescriptor": [
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "ASSISTIVE DEVICES",
+            "count": 0,
+            "subcode": "0GM"
+           },
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "INFANT CAR SEAT",
+            "count": 0,
+            "description": [
+             "Infant Car Seat"
+            ],
+            "subcode": "0G5"
+           },
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "STROLLER OR PUSHCHAIR",
+            "count": 0,
+            "description": [
+             "Stroller/Pushchair"
+            ],
+            "subcode": "0F4"
+           }
+          ],
+          "pieces": 0
+         }
+        ]
+       },
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "AFXQc/+z1LQWiHMCFVsTSwyAGQJ0B30G+XPWec0o4BtO/hE",
+        "segmentId": "GFYt3KdlhfiWRSlD",
+        "freeBaggageOption": [
+         {
+          "kind": "qpxexpress#freeBaggageAllowance",
+          "bagDescriptor": [
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "ASSISTIVE DEVICES",
+            "count": 0,
+            "subcode": "0GM"
+           },
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "INFANT CAR SEAT",
+            "count": 0,
+            "description": [
+             "Infant Car Seat"
+            ],
+            "subcode": "0G5"
+           },
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "STROLLER OR PUSHCHAIR",
+            "count": 0,
+            "description": [
+             "Stroller/Pushchair"
+            ],
+            "subcode": "0F4"
+           }
+          ],
+          "pieces": 0
+         }
+        ]
+       },
+       {
+        "kind": "qpxexpress#segmentPricing",
+        "fareId": "Amhp0LwT/MshSs+w4AY9Sq6d4rt4/1cIqAySr4+1Grox6Fo",
+        "segmentId": "G3TqDZcyg2GE-JZf",
+        "freeBaggageOption": [
+         {
+          "kind": "qpxexpress#freeBaggageAllowance",
+          "bagDescriptor": [
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "ASSISTIVE DEVICES",
+            "count": 0,
+            "subcode": "0GM"
+           },
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "INFANT CAR SEAT",
+            "count": 0,
+            "description": [
+             "Infant Car Seat"
+            ],
+            "subcode": "0G5"
+           },
+           {
+            "kind": "qpxexpress#bagDescriptor",
+            "commercialName": "STROLLER OR PUSHCHAIR",
+            "count": 0,
+            "description": [
+             "Stroller/Pushchair"
+            ],
+            "subcode": "0F4"
+           }
+          ],
+          "pieces": 0
+         }
+        ]
+       }
+      ],
+      "baseFareTotal": "CAD391.00",
+      "saleFareTotal": "USD348.00",
+      "saleTaxTotal": "USD138.07",
+      "saleTotal": "USD486.07",
+      "passengers": {
+       "kind": "qpxexpress#passengerCounts",
+       "adultCount": 1
+      },
+      "tax": [
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "XG",
+        "chargeType": "GOVERNMENT",
+        "code": "XG",
+        "country": "CA",
+        "salePrice": "USD17.40"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "US_1",
+        "chargeType": "GOVERNMENT",
+        "code": "US",
+        "country": "US",
+        "salePrice": "USD26.07"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "AY",
+        "chargeType": "GOVERNMENT",
+        "code": "AY",
+        "country": "US",
+        "salePrice": "USD11.20"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "XA",
+        "chargeType": "GOVERNMENT",
+        "code": "XA",
+        "country": "US",
+        "salePrice": "USD5.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "XY",
+        "chargeType": "GOVERNMENT",
+        "code": "XY",
+        "country": "US",
+        "salePrice": "USD7.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "YC",
+        "chargeType": "GOVERNMENT",
+        "code": "YC",
+        "country": "US",
+        "salePrice": "USD5.50"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "SQ",
+        "chargeType": "GOVERNMENT",
+        "code": "SQ",
+        "country": "CA",
+        "salePrice": "USD22.20"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "RC",
+        "chargeType": "GOVERNMENT",
+        "code": "RC",
+        "country": "CA",
+        "salePrice": "USD2.90"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "CA",
+        "chargeType": "GOVERNMENT",
+        "code": "CA",
+        "country": "CA",
+        "salePrice": "USD10.80"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "XG",
+        "chargeType": "GOVERNMENT",
+        "code": "XG",
+        "country": "CA",
+        "salePrice": "USD0.50"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "ZP",
+        "chargeType": "GOVERNMENT",
+        "code": "ZP",
+        "country": "US",
+        "salePrice": "USD16.00"
+       },
+       {
+        "kind": "qpxexpress#taxInfo",
+        "id": "XF",
+        "chargeType": "GOVERNMENT",
+        "code": "XF",
+        "country": "US",
+        "salePrice": "USD13.50"
+       }
+      ],
+      "fareCalculation": "YTO US X/PHL US BOS Q YTOBOS7.50 255.00QA00ZNG1 US X/NYC US YTO Q BOSYTO7.50 121.00EA07ZNX3 CAD 391.00 END FARE CAD 391.00 EQU USD 348.00 ZP YYZ PHL BOS LGA XT 5.50YC 7.00XY 5.00XA 26.07US 16.00ZP 11.20AY 10.80CA 2.90RC 22.20SQ 17.90XG 13.50XF PHL4.50 BOS4.50 LGA4.50",
+      "latestTicketingTime": "2014-10-30T23:59-04:00",
+      "ptc": "ADT"
+     }
+    ]
+   }
+  ]
+ }
+}

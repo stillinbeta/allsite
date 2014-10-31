@@ -1,0 +1,81 @@
+.members-labels {
+    font-weight: bold;
+}
+
+.members-labels {
+    clear: both;
+}
+
+.members-labels .label-name, .members-labels .label-airport {
+    float: left;
+}
+
+.member {
+    clear: both;
+    margin-bottom: .5em;
+}
+
+.members-labels .label-name {
+    width: 10em;
+    padding-bottom: 2px;
+}
+
+.member .name {
+    width: 10em;
+}
+
+.members-labels .label-airport {
+    width: 3em;
+}
+
+.member .airport {
+    width: 3em;
+}
+
+.result-line, .result-total {
+    clear: both;
+}
+
+.result-line {
+    border-top: 1px solid grey;
+}
+
+.result .result-line:first-of-type {
+    border: none;
+}
+
+.result-line span {
+    float: left;
+    width: 4em;
+    display: block;
+    padding: .5em 0 .5em 0;
+}
+
+
+.result-total {
+    border-top: 1px solid black;
+}
+
+.result-total .total-price {
+    margin-left: 4em;
+    font-weight: bold;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    background-color: #582A72;
+    padding: 1em;
+    color: #ccc;
+}
+
+input {
+    background-color: #401357;
+    color: white;
+    padding: .25em;
+}
+
+body {
+    background-color: #3D1255;
+}

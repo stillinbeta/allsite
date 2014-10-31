@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Allsite</title>
+  <link rel="stylesheet" href="../static/css/screen.css" >
+</head>
+<body>
+  <script type="text/x-handlebars" data-template-name="allsite">
+    <div class="content">
+        <div id="members">
+            <div class="members-labels">
+                <div class="label-name">Name</div><div class="label-airport">Airport Code</div>
+            </div>
+            <div class="member" id="member-0">
+                <input class="name" id="member-0-name" value="idan"/>
+                <input class="airport" id="member-0-airport" maxlength="3" value="TLV"/>
+            </div>
+            <div class="member" id="member-1">
+                <input class="name" id="member-1-name" value="liz"/>
+                <input class="airport" id="member-1-airport" maxlength="3" value="BOS"/>
+            </div>
+        </div>
+        <div id="extra-cities">
+            <h2> Extra cities</h2>
+            <div class="extra-city" id="extra-0">
+                <input id="extra-city-0" value="JFK"/>
+            </div>
+        </div>
+        <div id="results">
+            <div class="result">
+                <h1>New York City</h1>
+                <div class="result-line">
+                    <span class="result-name">Idan</span>
+                    <span class="result-price">$1410</span>
+                </div>
+                <div class="result-line">
+                    <span class="result-name">Liz</span>
+                    <span class="result-price">$300</span>
+                </div>
+                <div class="result-total">
+                    <span class="total-price">$1710</span>
+                </div>
+            </div>
+            <div class="result">
+                <h1>Tel Aviv</h1>
+                <div class="result-line">
+                    <span class="result-name">Idan</span>
+                    <span class="result-price">$0</span>
+                </div>
+                <div class="result-line">
+                    <span class="result-name">Liz</span>
+                    <span class="result-price">$2000</span>
+                </div>
+                <div class="result-total">
+                    <span class="total-price">$2000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </script>
+  <script src="/static/js/libs/jquery-1.10.2.min.js"></script>
+  <script src="/static/js/libs/handlebars-v1.3.0.js"></script>
+  <script src="/static/js/libs/ember.js"></script>
+  <script src="/static/js/libs/ember-data.js"></script>
+  <script src="/static/js/libs/ember-data.js"></script>
+  <script src="/static/js/application.js"></script>
+  <script src="/static/js/models/member.js"></script>
+</body>
+</body>
+</html>
