@@ -1,3 +1,13 @@
+.dates label {
+    display: block;
+    width: 15em;
+}
+
+.dates {
+    margin-bottom: 1em;
+}
+
+
 .members-labels {
     font-weight: bold;
 }
@@ -8,6 +18,12 @@
 
 .members-labels .label-name, .members-labels .label-airport {
     float: left;
+}
+
+.members-labels input {
+    float: left;
+    margin-left: 4em;
+    margin-bottom: 1em;
 }
 
 .member {
@@ -30,6 +46,10 @@
 
 .member .airport {
     width: 3em;
+}
+
+.extra-city {
+    margin-bottom: .25em;
 }
 
 .result-line, .result-total {
