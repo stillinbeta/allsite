@@ -8,12 +8,17 @@ import itertools
 from pprint import pprint
 from collections import defaultdict
 
+import redis
 from tornado.concurrent import Future
 from tornado import gen
 import tornado.httpserver
+from tornado.httpclient import AsyncHTTPClient
 import tornado.ioloop
 import tornado.log
 import tornado.web
+
+DAY_SECS = 60 * 60 * 24
+API_URL = 'https://www.googleapis.com/qpxExpress/v1/trips/search?key={}'
 
 logger = tornado.log.gen_log
 logger.setLevel(logging.INFO)
@@ -49,6 +54,14 @@ mock_body = [
   }
 ]
 
+class APIKeys:
+    keys = os.environ['GOOGLE_API_KEYS'].split(',')
+
+    @classmethod
+    def get(cls):
+        return random.choice(cls.keys).strip()
+
+redis_conn = redis.from_url(os.environ['REDIS_URL'])
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
@@ -79,7 +92,7 @@ class SearchHandler(tornado.web.RequestHandler):
                                  start_date=start_date,
                                  end_date=end_date)
 
-        prices = yield {'{}:{}'.format(orig, dest): cost(orig, dest)
+        prices = yield {'{}:{}'.format(orig, dest): gen.maybe_future(cost(orig, dest))
                         for orig, dest in itertools.product(member_airports, all_airports)}
 
         results = []
@@ -95,14 +108,58 @@ class SearchHandler(tornado.web.RequestHandler):
 
         return results
 
-
+    @gen.coroutine
     def get_roundtrip_cost(self, origin, dest, start_date, end_date):
-        f = Future()
         if origin == dest:
-            f.set_result(0)
+            return 0
         else:
-            f.set_result(random.randint(0, 2000)) # TODO
-        return f
+            key = '.'.join([origin.upper(), dest.upper(), start_date, end_date])
+            cached = redis_conn.get(key)
+            if cached is not None:
+                return int(cached)
+            ioloop = tornado.ioloop.IOLoop.instance()
+            logger.info(APIKeys.get())
+            value = yield self.qpx(origin, dest, start_date, end_date)
+            redis_conn.set(key, value, DAY_SECS)
+            return value
+
+    @gen.coroutine
+    def qpx(self, origin, dest, start_date, end_date):
+        req = {'request': {
+                  "slice": [
+                      {'origin': origin,
+                       'destination': dest,
+                       'date': start_date},
+                      {'origin': dest,
+                       'destination': origin,
+                       'date': end_date}
+                  ],
+                  "passengers": {
+                       "adultCount": 1,
+                       "infantInLapCount": 0,
+                       "infantInSeatCount": 0,
+                       "childCount": 0,
+                       "seniorCount": 0
+                  },
+                  "solutions": 1,
+                  "refundable": False,
+                  "saleCountry": "US"
+               }}
+        body = json.dumps(req)
+        client = AsyncHTTPClient()
+        response = yield client.fetch(
+            API_URL.format(APIKeys.get()),
+            method='POST',
+            headers={'Content-type': 'application/json'},
+            body=body
+        )
+        decoded = json.loads(str(response.body, 'utf8'))
+        # https://developers.google.com/qpx-express/v1/trips/search#response
+        # trips.tripOption.0.saleTotal will be something like 'USD486.67'
+        # The 3: strips this.
+        return float(decoded['trips']['tripOption'][0]['saleTotal'][3:])
+
+
 
 def main():
     application = tornado.web.Application(
