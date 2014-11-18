@@ -99,12 +99,17 @@ $(function() {
   add_member();
 
   $('#search').click(function() {
-    data = collect_data()
-    console.debug(data)
+    data = collect_data();
+    console.debug(data);
+    $('#results').html('');
+    $('#loading').show()
     $.ajax({url: '/search',
             data: JSON.stringify(data),
             type: 'POST',
             dataType: 'json'})
+      .always(function() {
+        $('#loading').hide();
+      })
       .done(function(data) {
         console.debug(data);
         $('#results').html(result_template(data));

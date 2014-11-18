@@ -48,6 +48,17 @@
     margin-bottom: .25em;
 }
 
+#loading {
+    width: 100%;
+    display: none;
+}
+
+#loading img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .result-line, .result-total {
     clear: both;
 }
